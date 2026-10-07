@@ -1,0 +1,120 @@
+/* Decorative image layers stay behind the text and foreground illustrations.
+   Base motifs retain their source geometry; slide variants adjust scale and crop. */
+.bg-squares::before,
+.bg-triangle::before,
+.bg-lattice::before,
+.bg-top-outlines::before,
+.bg-rings::before,
+.bg-orbits::before,
+.bg-shards::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Published Pubky square outlines, lightly cropped at the lower-right edge. */
+.bg-squares::before {
+  background-image: url('./assets/backgrounds/pubky-square.png');
+  background-size: 1100px auto;
+  background-position: 700px 245px;
+  opacity: .045;
+}
+#welcome.bg-squares::before {
+  background-position: 740px -160px;
+  opacity: .03;
+}
+.bg-squares.bg-collections::before {
+  background-size: 1800px auto;
+  background-position: 640px 120px;
+  opacity: .035;
+}
+
+/* Source slide 24: the large glow and triangle; omit small foreground shards. */
+.bg-triangle::before {
+  background-image: url('./assets/artwork/triangle-outline.png'), url('./assets/artwork/source-image-04.png');
+  background-size: 880.378px 796.0945px, 979.3384px 873.1339px;
+  background-position: 548.3465px -209.8268px, 548.3465px -209.8268px;
+  opacity: .3;
+}
+.bg-triangle.bg-quiet::before { opacity: .2; }
+#sdk .source-scene { opacity: .45; }
+
+/* Source slide 20: only the nine diminishing outline layers. */
+.bg-lattice::before {
+  background-image:
+    url('./assets/artwork/source-image-40.png'),
+    url('./assets/artwork/source-image-44.png'),
+    url('./assets/artwork/source-image-41.png'),
+    url('./assets/artwork/source-image-35.png'),
+    url('./assets/artwork/source-image-37.png'),
+    url('./assets/artwork/source-image-43.png'),
+    url('./assets/artwork/source-image-31.png'),
+    url('./assets/artwork/source-image-39.png'),
+    url('./assets/artwork/perspective-line.png');
+  background-size:
+    433.9528px 433.9528px, 434.3937px 434.3937px, 434.8346px 434.8346px,
+    435.2756px 435.2756px, 435.7165px 435.7165px, 436.1575px 436.1575px,
+    436.5984px 436.5984px, 437.0394px 437.0394px, 437.5435px 437.5435px;
+  background-position:
+    740.5354px 427.0236px, 787.6535px 379.8425px, 834.8346px 332.7244px,
+    881.9528px 285.5433px, 929.1339px 238.3622px, 976.315px 191.2441px,
+    1023.4331px 144.063px, 1070.6142px 96.9449px, 1117.7953px 49.7638px;
+  opacity: .24;
+}
+.bg-lattice.bg-quiet::before { opacity: .14; }
+
+/* Source slide 30: two outline fragments at their original cropped positions. */
+.bg-top-outlines::before {
+  background-image: url('./assets/artwork/source-image-87.png'), url('./assets/artwork/source-image-97.png');
+  background-size: 633.2598px 543.622px, 641.1339px 590.2992px;
+  background-position: 850.0157px -428.3465px, 950.4252px -353.3228px;
+  opacity: .045;
+}
+/* Large outline arcs sit behind the closing illustration, with crowns off-stage. */
+.bg-top-outlines.bg-closing::before {
+  background-size: 1100px auto, 1280px auto;
+  background-position: 840px -620px, 965px -725px;
+  opacity: .025;
+}
+/* A smaller, lower triangle frames the guest artwork below the header. */
+.bg-triangle.bg-iroh::before {
+  background-size: 660.2835px 597.0709px, 734.5038px 654.8504px;
+  background-position: 870px 190px, 870px 190px;
+  opacity: .24;
+}
+
+/* Source slide 1: the segmented rings remain cropped at the top-right edge. */
+.bg-rings::before {
+  background-image: url('./assets/artwork/source-image-06.png');
+  background-size: 555.7795px 601.5748px;
+  background-position: 1044.1575px -191.685px;
+  opacity: .18;
+}
+.bg-rings.bg-feature::before { opacity: .25; }
+
+/* Source slide 12: flattened rings over the original curved ground plane.
+   The ellipse's final opacity is .15686 × .22, approximately 3.5%. */
+.bg-orbits::before {
+  background-image:
+    url('./assets/artwork/source-image-50.png'),
+    radial-gradient(ellipse 806.64565px 416.6299px at 806.64565px 899.9685px, rgba(255, 255, 255, .15686) 99.8%, transparent 100%);
+  background-size: 919.937px 449.9528px, 1600px 900px;
+  background-position: 761.8898px 437.3543px, 0 0;
+  opacity: .22;
+}
+
+/* Source slide 13: original floating shards and a 2.5% curved ground plane. */
+.bg-shards::before {
+  background-image:
+    url('./assets/artwork/source-image-69.png'),
+    url('./assets/artwork/source-image-49.png'),
+    url('./assets/artwork/source-image-58.png'),
+    radial-gradient(ellipse 806.64565px 416.6299px at 806.64565px 899.9685px, rgba(255, 255, 255, .15686) 99.8%, transparent 100%);
+  background-size: 58.0787px 56.7559px, 54.3622px 53.4173px, 71.3071px 65.9528px, 1600px 900px;
+  background-position: 1280.4409px 313.7638px, 723.5906px 71.622px, 1162.8346px 117.9213px, 0 0;
+  opacity: .16;
+}

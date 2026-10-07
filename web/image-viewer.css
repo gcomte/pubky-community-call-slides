@@ -1,0 +1,32 @@
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  width: min(96vw, 1800px);
+  height: 94vh;
+  height: 94dvh;
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #44444d;
+  border-radius: 8px;
+  background: #05050a;
+  color: #fff;
+  font-family: 'Inter Tight', sans-serif;
+  overflow: hidden;
+}
+.image-viewer[open] { display: flex; flex-direction: column; }
+.image-viewer::backdrop { background: rgb(0 0 0 / 88%); }
+.image-viewer-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px 20px; border-bottom: 1px solid #33333d; }
+.image-viewer-toolbar h2 { flex: 1; margin: 0 12px 0 0; font-size: 20px; font-weight: 550; white-space: nowrap; }
+.image-viewer-toolbar button { padding: 7px 12px; border: 1px solid #62626b; border-radius: 4px; background: #16161e; color: inherit; font: inherit; font-size: 17px; cursor: pointer; }
+.image-viewer-toolbar button:hover { border-color: #c8ff00; }
+.image-viewer-toolbar button:disabled { opacity: 0.4; cursor: default; }
+.image-viewer-toolbar button:focus-visible, .image-viewer-viewport:focus-visible { outline: 2px solid #c8ff00; outline-offset: -3px; }
+.image-viewer-zoom { min-width: 50px; color: #a7a7af; font-size: 16px; text-align: center; font-variant-numeric: tabular-nums; }
+.image-viewer-viewport { flex: 1; min-height: 0; padding: 24px; overflow: auto; overscroll-behavior: contain; }
+.image-viewer-image { display: block; max-width: none; max-height: none; margin: 0; }
+
+@media print {
+  .image-viewer, .image-viewer::backdrop { display: none !important; }
+}

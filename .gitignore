@@ -1,0 +1,14 @@
+# Private incoming references and anything extracted from them.
+/references/
+
+# Local dependencies, generated builds, and review artifacts.
+/node_modules/
+/dist/
+/.artifacts/
+/.playwright-mcp/
+/.vercel/
+
+# Local credentials and environment overrides.
+.env
+.env.*
+!.env.example

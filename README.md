@@ -169,8 +169,10 @@ Links throughout the deck keep their text color and use a thin muted-gray underl
 that turns lime on hover or keyboard focus. Links whose text is already lime have
 no underline. The label itself is clickable rather than a separate arrow.
 The next chapter uses the Agenda's four-section layout. Pubky Ring v2.0 and Pubky
-Passport appear under “Just released”; private data, payments, and shared data/indexing
-cover upcoming work without promising release dates.
+Passport appear under “Just released”; “Private data” includes Locks, access control
+and encryption, and Private messages. “Apps & payments” groups Paykit, Marketplace,
+and Pubky Arena, while “Shared data & indexing” covers pubky-social-specs and
+pubky-watcher. The three upcoming-work sections do not promise release dates.
 
 The incoming files stay in the ignored `references/` directory:
 

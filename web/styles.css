@@ -135,7 +135,8 @@ button.image-stage { cursor: zoom-in; }
 .protocol .lead { max-width: 660px; margin-top: 50px; font-size: 34px; white-space: nowrap; }
 .protocol .speaker { position: static; display: block; margin-top: 52px; font-size: 48px; }
 .reveal .pkarr-art { position: absolute; left: 820px; top: 270px; width: 620px; height: 620px; object-fit: contain; }
-#iroh-blobs .slide-body { width: 640px; }
+#iroh-blobs h2 { white-space: nowrap; }
+.reveal .guest-subtitle { max-width: 660px; margin-top: 42px; color: var(--muted); font-size: 30px; line-height: 1.4; }
 #iroh-blobs .speaker { position: static; display: block; margin-top: 56px; font-size: 48px; }
 #iroh-blobs .project-description { margin-top: 18px; }
 .guest-affiliation { color: var(--lime); }

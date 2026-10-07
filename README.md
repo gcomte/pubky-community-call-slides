@@ -111,6 +111,9 @@ The cover keeps its larger full logo.
 Regular slides use a shared title position at x160, y160 and 100-pixel type,
 with single-line titles wherever they fit comfortably. Collections, self-hosting,
 the self-hosting guide, and PKARR use full-width title areas with content below.
+Slide titles, section headings, subtitles, and agenda labels use sentence case:
+capitalize the first word, proper names, and acronyms. Preserve project names,
+the official event name, and exact titles of referenced talks.
 The cover retains its deliberately different composition. The closing quotation
 uses two intentional lines of 92-pixel type at the shared title position, with
 a muted 28-pixel attribution beneath it.
@@ -138,7 +141,8 @@ progress bar.
 ## Draft status and private references
 
 The running order comes from the supplied planning PDF and includes guest speaker
-Rüdiger Klaehn from iroh on iroh-blobs, immediately after Andrei's PKARR segment.
+Rüdiger Klaehn from iroh on “Iroh content discovery — Using Mainline and PKARR,”
+immediately after Andrei's PKARR segment. The existing `#/iroh-blobs` link is retained.
 This is an initial
 agenda deck with segment introductions; presenter demos, timings, and detailed
 talking points still need finalization. The SDK slide presents v0.14.0 and the

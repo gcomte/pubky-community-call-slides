@@ -79,12 +79,12 @@
           <aside class="notes">
             <p>Gabriel, approximately two minutes. This is a cumulative update from v0.6.0 to the latest release, v0.14.0. Small version labels identify when each feature arrived; these are not all new in v0.14.0.</p>
             <ul>
-              <li>Live updates: v0.7.0 added SDK subscriptions to server-sent events (SSE) in Rust and JavaScript/WASM. Apps can react to homeserver changes. The server event-stream endpoint already existed in v0.6.0. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.7.0" target="_blank" rel="noopener noreferrer">v0.7.0 release</a>.</li>
+              <li>Live updates: v0.7.0 added SDK subscriptions to server-sent events (SSE) in Rust and JavaScript/WASM. Apps can react to Homeserver changes. The server event-stream endpoint already existed in v0.6.0. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.7.0" target="_blank" rel="noopener noreferrer">v0.7.0 release</a>.</li>
               <li>App-specific authentication: v0.10.0 introduced grant-based credentials with scoped access, revocation, and automatic refresh. This describes SDK capabilities, not a claim that every app has migrated. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.10.0" target="_blank" rel="noopener noreferrer">v0.10.0 release</a>.</li>
-              <li>Private storage: /priv arrived in v0.10.0 as experimental, alpha functionality; the release explicitly advises against production use. Access is controlled by the homeserver. It is not end-to-end encryption: server administrators can read and write this data. APIs may change. <a href="https://github.com/pubky/pubky-homeserver/blob/v0.10.0/docs/PRIVATE_STORAGE.md" target="_blank" rel="noopener noreferrer">Private-storage access model</a>.</li>
+              <li>Private storage: /priv arrived in v0.10.0 as experimental, alpha functionality; the release explicitly advises against production use. Access is controlled by the Homeserver. It is not end-to-end encryption: server administrators can read and write this data. APIs may change. <a href="https://github.com/pubky/pubky-homeserver/blob/v0.10.0/docs/PRIVATE_STORAGE.md" target="_blank" rel="noopener noreferrer">Private-storage access model</a>.</li>
               <li>Native HTTPS fallback: v0.8.0 lets native clients use an advertised HTTPS domain when the direct PubkyTLS endpoint cannot be reached. Browser/WASM clients already used domain endpoints. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.8.0" target="_blank" rel="noopener noreferrer">v0.8.0 release</a>.</li>
               <li>Error-response limits: v0.13.0 bounds SDK error-body reads to 4,096 bytes by default. This limit applies to error responses, not normal successful downloads. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.13.0" target="_blank" rel="noopener noreferrer">v0.13.0 release</a>; <a href="https://github.com/pubky/pubky-homeserver/pull/608" target="_blank" rel="noopener noreferrer">PR #608</a>.</li>
-              <li>Safer writes are a homeserver change in v0.14.0: uploads are staged before finalization, and commit finalization is protected against a client disconnect. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.14.0" target="_blank" rel="noopener noreferrer">v0.14.0 release</a>; <a href="https://github.com/pubky/pubky-homeserver/pull/637" target="_blank" rel="noopener noreferrer">PR #637</a>.</li>
+              <li>Safer writes are a Homeserver change in v0.14.0: uploads are staged before finalization, and commit finalization is protected against a client disconnect. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.14.0" target="_blank" rel="noopener noreferrer">v0.14.0 release</a>; <a href="https://github.com/pubky/pubky-homeserver/pull/637" target="_blank" rel="noopener noreferrer">PR #637</a>.</li>
             </ul>
             <p>Structured errors, browser-session persistence, and Postgres support were already part of v0.6.0; do not present them as new in this interval. Upgrading crosses breaking changes: use the <a href="https://github.com/pubky/pubky-homeserver/blob/v0.14.0/docs/v0.10-migration/README.md" target="_blank" rel="noopener noreferrer">v0.10 migration guide</a> and review the intervening release notes.</p>
           </aside>
@@ -135,7 +135,7 @@
             <p>Gabriel, approximately ten minutes. Walk through four areas: tools for agents, the developer guide, documentation improvements, and the landing-page demos. Follow the linked labels for short examples. Return to this deck for Nexus Scout.</p>
             <p>The official Pubky site names its linked wiki DeepWiki. Its <a href="https://github.com/pubky/pubky-knowledge-base-v2/blob/main/src/components/AiResources.astro" target="_blank" rel="noopener noreferrer">AI resources component</a> lists Agent skills, DeepWiki, and Context7. Markdown support links to an actual Markdown page; <a href="https://pubky.org/llms.txt" target="_blank" rel="noopener noreferrer">llms.txt</a> is the documentation index for agents.</p>
             <p>Developer-guide links jump to local Pubky Docker setup, the first-app walkthrough, and the starter template. The Ring simulator is a browser signer for local testnet development. The menu link opens the docs overview with the restructured sidebar; updated and cleaned-up content is an overall improvement, without a single dedicated destination.</p>
-            <p>The Context7 link shows the Pubky libraries, as linked by pubky.org. Direct documentation pages: <a href="https://context7.com/pubky/pubky-homeserver" target="_blank" rel="noopener noreferrer">Pubky SDK and homeserver</a> and <a href="https://context7.com/pubky/pkarr" target="_blank" rel="noopener noreferrer">PKARR</a>.</p>
+            <p>The Context7 link shows the Pubky libraries, as linked by pubky.org. Direct documentation pages: <a href="https://context7.com/pubky/pubky-homeserver" target="_blank" rel="noopener noreferrer">Pubky SDK and Homeserver</a> and <a href="https://context7.com/pubky/pkarr" target="_blank" rel="noopener noreferrer">PKARR</a>.</p>
           </aside>
         </section>
 
@@ -217,11 +217,11 @@ LIMIT 1</code></pre>
           <aside class="notes">Hand over to secondl1ght for a demo of Pubky Collections, under five minutes. Use only the public handle secondl1ght. The description is supported by the <a href="https://pubky.app/post/ihaqcthsdbk751sxctk849bdr7yz7a934qen5gmpcbwcur49i97y/0035GRWTEMMG0" target="_blank" rel="noopener noreferrer">public Collections announcement</a>.</aside>
         </section>
 
-        <section class="slide bg-lattice bg-quiet" id="self-hosting" aria-label="Run your own Pubky homeserver on Umbrel">
+        <section class="slide bg-lattice bg-quiet" id="self-hosting" aria-label="Run your own Pubky Homeserver on Umbrel">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
           <img class="hosting-art" src="./assets/artwork/self-hosting.png" width="1254" height="1254" alt="A black home server with lime Pubky branding, surrounded by icons representing files, media, people, and code." />
           <div class="slide-body">
-            <h2>Run your own homeserver</h2>
+            <h2>Run your own Homeserver</h2>
             <p class="hosting-description">Self-sovereignty from your living room.<br />Host your Pubky data on Umbrel.</p>
             <span class="speaker">SHAcollision</span>
           </div>
@@ -235,7 +235,7 @@ LIMIT 1</code></pre>
             <h2>Self-hosting guides</h2>
             <p class="hosting-guide-source"><span class="hosting-guide-label">GitHub:</span> pubky-homeserver › <a href="https://github.com/pubky/pubky-homeserver/tree/main/docs" target="_blank" rel="noopener noreferrer">docs</a></p>
             <ul class="hosting-guide-links">
-              <li><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/INSTALL.md" target="_blank" rel="noopener noreferrer">Install and run a homeserver</a></li>
+              <li><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/INSTALL.md" target="_blank" rel="noopener noreferrer">Install and run a Homeserver</a></li>
               <li><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/DEPLOY.md" target="_blank" rel="noopener noreferrer">Deployment options</a></li>
               <li><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/deploy/cloudflare-tunnel.md" target="_blank" rel="noopener noreferrer">Cloudflare Tunnel</a></li>
             </ul>

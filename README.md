@@ -114,6 +114,8 @@ the self-hosting guide, and PKARR use full-width title areas with content below.
 Slide titles, section headings, subtitles, and agenda labels use sentence case:
 capitalize the first word, proper names, and acronyms. Preserve project names,
 the official event name, and exact titles of referenced talks.
+Always capitalize “Homeserver” and “Homeservers” in prose, including mid-sentence;
+keep repository identifiers and URLs such as `pubky-homeserver` unchanged.
 The cover retains its deliberately different composition. The closing quotation
 uses two intentional lines of 92-pixel type at the shared title position, with
 a muted 28-pixel attribution beneath it.
@@ -148,7 +150,7 @@ agenda deck with segment introductions; presenter demos, timings, and detailed
 talking points still need finalization. The SDK slide presents v0.14.0 and the
 main changes since v0.6.0, with introduction-version labels and primary sources
 in its speaker notes. Experimental private storage is labeled explicitly, and
-the reliability section distinguishes SDK changes from homeserver improvements.
+the reliability section distinguishes SDK changes from Homeserver improvements.
 Its four topics use the same two-column grid as the Agenda slide.
 Version labels and storage paths share a monospace font stack (Courier New,
 Liberation Mono, then the browser's monospace fallback).

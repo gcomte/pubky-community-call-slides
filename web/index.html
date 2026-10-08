@@ -4,316 +4,141 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#05050a" />
-    <meta name="description" content="Pubky Community Call #4 — October 7, 2026. SDK updates, builder tools, live demos, self-hosting, and guest talks." />
+    <meta name="description" content="Pubky Community Call #[N] — [Date]. [One-sentence call description.]" />
     <link rel="icon" href="./assets/branding/pubky-brand-mark.svg" type="image/svg+xml" />
-    <title>Pubky Community Call #4</title>
+    <title>Pubky Community Call #[N]</title>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section class="slide cover bg-squares" id="welcome" aria-label="Pubky Community Call #4">
+        <!-- Copy whole sections to reuse a layout; give each copy a unique id.
+             Replace all [placeholders], including metadata, accessible labels, and notes. -->
+        <section class="slide cover bg-squares" id="welcome" aria-label="Pubky Community Call #[N]">
           <img class="cover-logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" />
           <div class="slide-body">
-            <h1>Pubky Community<br />Call <span class="accent">#4</span></h1>
-            <p class="event-line">7 October 2026</p>
+            <h1>Pubky Community<br />Call <span class="accent">#[N]</span></h1>
+            <p class="event-line">[Day Month Year] · [Time UTC]</p>
           </div>
-          <!-- Original last-call slide 1 animation; its continuous loop shows stream activity. -->
           <img class="stream-animation" src="./assets/artwork/pubky-spinner.gif" width="267" height="267" alt="Rotating Pubky mark — stream activity indicator" />
-          <aside class="notes">Welcome to Pubky Community Call #4. Wednesday, October 7, 2026, 16:00 UTC. Gabriel introduces the call. Allow about three minutes for the welcome. Invite people to add questions during the presentations, and mention that the call is streamed and recorded.</aside>
+          <aside class="notes">[Host]: welcome everyone to Call #[N] on [date and time]. Introduce the agenda, explain how to ask questions, and confirm whether the call is recorded. [Welcome duration.] All speaker notes are public; replace these prompts before presenting.</aside>
         </section>
 
-        <section class="slide agenda bg-rings" id="agenda" aria-label="Agenda">
+        <section class="slide bg-rings" id="agenda" aria-label="Agenda">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
           <div class="slide-body">
             <h2>Agenda</h2>
-            <div class="agenda-list">
-              <div class="agenda-row"><h3>SDK &amp; developer resources</h3><p>New SDK · Developer guide · Developer tooling · Templates · Demo projects</p></div>
-              <div class="agenda-row"><h3>AI tools &amp; skills</h3><p>pubky.org · Nexus Scout · DeepWiki · Context7 · Agent skills</p></div>
-              <div class="agenda-row"><h3>Live demos</h3><p>Collections · Homeserver self-hosting · PKARR · Loopky</p></div>
-              <div class="agenda-row"><h3>Guest talk</h3><p>Rüdiger Klaehn · Iroh content discovery</p></div>
+            <div class="content-grid">
+              <div class="content-item"><h3>[Update topic]</h3><p>[Highlights and key changes]</p></div>
+              <div class="content-item"><h3>[Tools &amp; resources]</h3><p>[Links and resources to share]</p></div>
+              <div class="content-item"><h3>[Live demos]</h3><p>[Projects and presenters]</p></div>
+              <div class="content-item"><h3>[Guest talk]</h3><p>[Speaker and session title]</p></div>
             </div>
           </div>
-          <aside class="notes">This running order combines the planning document with the guest talk by Rüdiger Klaehn from iroh, immediately after Andrei. Keep a balance between developer detail and broadly interesting demos. The event has a roughly 90-minute window. Confirm the guest talk's duration and update the overall timings before presenting.</aside>
+          <aside class="notes">[Introduce the running order and timing for each segment.] Copy or remove sections to match this agenda. Keep slide titles and section headings in sentence case.</aside>
         </section>
 
-        <section class="slide sdk" id="sdk" aria-label="Pubky SDK update">
+        <section class="slide bg-triangle bg-quiet" id="updates" aria-label="Project updates">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <!-- PowerPoint slide 24: original 1600 × 900 coordinates and stacking order. -->
-          <div class="source-scene" data-source-slide="24" aria-hidden="true">
-            <span data-source-shape="419" style="left:0px;top:483.3386px;width:1613.2808px;height:833.2808px;background:#000000;opacity:0.1569;border-radius:50%"></span>
-            <img data-source-shape="420" src="./assets/artwork/source-image-04.png" alt="" style="left:548.3465px;top:-209.8268px;width:979.3384px;height:873.1339px" />
-            <img data-source-shape="421" src="./assets/artwork/triangle-outline.png" alt="" style="left:548.3465px;top:-209.8268px;width:880.378px;height:796.0945px" />
-            <img data-source-shape="422" src="./assets/artwork/source-image-16.png" alt="" style="left:187.5276px;top:379.1496px;width:78.2992px;height:72.4409px" />
-            <img data-source-shape="423" src="./assets/artwork/source-image-07.png" alt="" style="left:68.5354px;top:606.5512px;width:63.748px;height:62.2992px" />
-          </div>
           <div class="slide-body">
-            <div class="sdk-title"><h2>Pubky SDK</h2><span class="release-version">v0.14.0</span></div>
-            <div class="sdk-highlights">
-              <article class="sdk-highlight">
-                <h3>Live updates</h3>
-                <p class="sdk-feature-detail">Server-sent events <span class="introduced-version" aria-label="Introduced in v0.7.0">v0.7.0</span></p>
-              </article>
-              <article class="sdk-highlight">
-                <h3>Grant-based auth</h3>
-                <p class="sdk-feature-detail">App-specific authentication <span class="introduced-version" aria-label="Introduced in v0.10.0">v0.10.0</span></p>
-                <p class="sdk-feature-detail"><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/v0.10-migration/README.md" target="_blank" rel="noopener noreferrer">Migration guide</a></p>
-              </article>
-              <article class="sdk-highlight">
-                <h3>Private storage</h3>
-                <p class="sdk-feature-detail"><code>/priv</code> · Experimental <span class="introduced-version" aria-label="Introduced in v0.10.0">v0.10.0</span></p>
-                <div class="sdk-path-examples" aria-label="Example public and private storage paths">
-                  <p><code>/pub/my-app/profile.json</code></p>
-                  <p><code>/priv/my-app/settings.json</code></p>
-                </div>
-              </article>
-              <article class="sdk-highlight sdk-reliability">
-                <h3>Stronger foundations</h3>
-                <div class="sdk-reliability-details">
-                  <p>Native HTTPS fallback <span class="introduced-version" aria-label="Introduced in v0.8.0">v0.8.0</span></p>
-                  <p>Error-response limits <span class="introduced-version" aria-label="Introduced in v0.13.0">v0.13.0</span></p>
-                  <p>Safe uploads <span class="introduced-version" aria-label="Introduced in v0.14.0">v0.14.0</span></p>
-                </div>
-              </article>
+            <div class="title-row"><h2>[Project updates]</h2><span class="release-version">[vX.Y.Z]</span></div>
+            <div class="content-grid">
+              <article class="content-item"><h3>[Feature one]</h3><p>[What changed and why it matters.]</p></article>
+              <article class="content-item"><h3>[Feature two]</h3><p>[A concise benefit for the audience.]</p></article>
+              <article class="content-item"><h3>[Developer experience]</h3><p>[An example, API, or workflow.]</p></article>
+              <article class="content-item"><h3>[Reliability]</h3><p>[A verified improvement or limitation.]</p></article>
             </div>
           </div>
-          <aside class="notes">
-            <p>Gabriel, approximately two minutes. This is a cumulative update from v0.6.0 to the latest release, v0.14.0. Small version labels identify when each feature arrived; these are not all new in v0.14.0.</p>
-            <ul>
-              <li>Live updates: v0.7.0 added SDK subscriptions to server-sent events (SSE) in Rust and JavaScript/WASM. Apps can react to Homeserver changes. The server event-stream endpoint already existed in v0.6.0. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.7.0" target="_blank" rel="noopener noreferrer">v0.7.0 release</a>.</li>
-              <li>App-specific authentication: v0.10.0 introduced grant-based credentials with scoped access, revocation, and automatic refresh. This describes SDK capabilities, not a claim that every app has migrated. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.10.0" target="_blank" rel="noopener noreferrer">v0.10.0 release</a>.</li>
-              <li>Private storage: /priv arrived in v0.10.0 as experimental, alpha functionality; the release explicitly advises against production use. Access is controlled by the Homeserver. It is not end-to-end encryption: server administrators can read and write this data. APIs may change. <a href="https://github.com/pubky/pubky-homeserver/blob/v0.10.0/docs/PRIVATE_STORAGE.md" target="_blank" rel="noopener noreferrer">Private-storage access model</a>.</li>
-              <li>Native HTTPS fallback: v0.8.0 lets native clients use an advertised HTTPS domain when the direct PubkyTLS endpoint cannot be reached. Browser/WASM clients already used domain endpoints. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.8.0" target="_blank" rel="noopener noreferrer">v0.8.0 release</a>.</li>
-              <li>Error-response limits: v0.13.0 bounds SDK error-body reads to 4,096 bytes by default. This limit applies to error responses, not normal successful downloads. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.13.0" target="_blank" rel="noopener noreferrer">v0.13.0 release</a>; <a href="https://github.com/pubky/pubky-homeserver/pull/608" target="_blank" rel="noopener noreferrer">PR #608</a>.</li>
-              <li>Safer writes are a Homeserver change in v0.14.0: uploads are staged before finalization, and commit finalization is protected against a client disconnect. <a href="https://github.com/pubky/pubky-homeserver/releases/tag/v0.14.0" target="_blank" rel="noopener noreferrer">v0.14.0 release</a>; <a href="https://github.com/pubky/pubky-homeserver/pull/637" target="_blank" rel="noopener noreferrer">PR #637</a>.</li>
-            </ul>
-            <p>Structured errors, browser-session persistence, and Postgres support were already part of v0.6.0; do not present them as new in this interval. Upgrading crosses breaking changes: use the <a href="https://github.com/pubky/pubky-homeserver/blob/v0.14.0/docs/v0.10-migration/README.md" target="_blank" rel="noopener noreferrer">v0.10 migration guide</a> and review the intervening release notes.</p>
-          </aside>
+          <aside class="notes">[Presenter and duration.] Verify version numbers, feature status, and release notes. Add public source links here. Remove the version label if this is not a release update; use code elements for commands or paths.</aside>
         </section>
 
-        <section class="slide docs bg-lattice" id="developer-hub" aria-label="Pubky Docs">
+        <section class="slide resources-slide bg-lattice" id="resources" aria-label="Resources">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
           <div class="slide-body">
-            <h2>Pubky Docs</h2>
+            <h2>[Resources]</h2>
             <p class="resource-site"><a class="link-accent" href="https://pubky.org/" target="_blank" rel="noopener noreferrer">pubky.org</a></p>
-            <div class="docs-grid">
-              <article class="docs-section">
-                <h3>Agent-friendly</h3>
-                <ul class="docs-items">
-                  <li><a href="https://github.com/pubky/agent-skills" target="_blank" rel="noopener noreferrer">Agent skills</a></li>
-                  <li><a href="https://deepwiki.com/pubky/pubky-homeserver" target="_blank" rel="noopener noreferrer">DeepWiki</a></li>
-                  <li><a href="https://context7.com/?q=pubky" target="_blank" rel="noopener noreferrer">Context7</a></li>
-                  <li><a href="https://pubky.org/developer-guide.md" target="_blank" rel="noopener noreferrer">Markdown support</a></li>
-                </ul>
-              </article>
-              <article class="docs-section">
-                <h3><a href="https://pubky.org/developer-guide/" target="_blank" rel="noopener noreferrer">Developer guide</a></h3>
-                <ul class="docs-items">
-                  <li>Local testnet setup</li>
-                  <li>Step-by-step guide</li>
-                  <li><a href="https://pubky.github.io/pubky-app-templates/" target="_blank" rel="noopener noreferrer">Starter templates</a></li>
-                  <li><a href="https://simulator.pubkyring.app/" target="_blank" rel="noopener noreferrer">Pubky Ring simulator</a></li>
-                </ul>
-              </article>
-              <article class="docs-section">
-                <h3>Refined documentation</h3>
-                <ul class="docs-items">
-                  <li><a href="https://pubky.org/overview/" target="_blank" rel="noopener noreferrer">Restructured menu</a></li>
-                  <li><a href="https://pubky.org/resources/" target="_blank" rel="noopener noreferrer">Resources page</a></li>
-                  <li><a href="https://pubky.org/glossary/" target="_blank" rel="noopener noreferrer">Glossary</a></li>
-                  <li>Updated &amp; cleaned-up content</li>
-                </ul>
-              </article>
-              <article class="docs-section">
-                <h3>Landing page</h3>
-                <ul class="docs-items">
-                  <li><a href="https://pubky.org/#demos" target="_blank" rel="noopener noreferrer">Demo projects</a></li>
-                </ul>
-              </article>
+            <!-- Replace example.com URLs as well as the visible link labels. -->
+            <div class="content-grid">
+              <article class="content-item"><h3>[Documentation]</h3><ul class="resource-list"><li><a href="https://example.com/" target="_blank" rel="noopener noreferrer">[Resource title]</a></li><li>[What the resource helps you do]</li></ul></article>
+              <article class="content-item"><h3>[Developer tools]</h3><ul class="resource-list"><li><a href="https://example.com/" target="_blank" rel="noopener noreferrer">[Tool or repository]</a></li><li>[When to use it]</li></ul></article>
+              <article class="content-item"><h3>[Guides]</h3><ul class="resource-list"><li><a href="https://example.com/" target="_blank" rel="noopener noreferrer">[Guide title]</a></li><li>[Who it is for]</li></ul></article>
+              <article class="content-item"><h3>[Community]</h3><ul class="resource-list"><li><a href="https://example.com/" target="_blank" rel="noopener noreferrer">[Community resource]</a></li><li>[How to contribute]</li></ul></article>
             </div>
           </div>
-          <aside class="notes">
-            <p>Gabriel, approximately ten minutes. Walk through four areas: tools for agents, the developer guide, documentation improvements, and the landing-page demos. Follow the linked labels for short examples. Return to this deck for Nexus Scout.</p>
-            <p>The official Pubky site names its linked wiki DeepWiki. Its <a href="https://github.com/pubky/pubky-knowledge-base-v2/blob/main/src/components/AiResources.astro" target="_blank" rel="noopener noreferrer">AI resources component</a> lists Agent skills, DeepWiki, and Context7. Markdown support links to an actual Markdown page; <a href="https://pubky.org/llms.txt" target="_blank" rel="noopener noreferrer">llms.txt</a> is the documentation index for agents.</p>
-            <p>Developer-guide links jump to local Pubky Docker setup, the first-app walkthrough, and the starter template. The Ring simulator is a browser signer for local testnet development. The menu link opens the docs overview with the restructured sidebar; updated and cleaned-up content is an overall improvement, without a single dedicated destination.</p>
-            <p>The Context7 link shows the Pubky libraries, as linked by pubky.org. Direct documentation pages: <a href="https://context7.com/pubky/pubky-homeserver" target="_blank" rel="noopener noreferrer">Pubky SDK and Homeserver</a> and <a href="https://context7.com/pubky/pkarr" target="_blank" rel="noopener noreferrer">PKARR</a>.</p>
-          </aside>
+          <aside class="notes">[Presenter and duration.] Replace every example.com URL with a verified public destination. Update the site link if needed. Keep labels meaningful and capitalize Homeserver in prose when referring to it.</aside>
         </section>
 
-        <section class="slide scout bg-squares" id="nexus-scout" aria-label="Nexus Scout: query the Pubky social graph">
+        <section class="slide metrics-slide bg-squares" id="metrics" aria-label="Community insights">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
           <div class="slide-body">
-            <h2>Nexus Scout</h2>
-            <p class="scout-description">Let your agent explore the social graph.</p>
-            <p class="scout-flow">Your social graph prompt <span aria-hidden="true">→</span> LLM writes Cypher <span aria-hidden="true">→</span> Scout returns data</p>
-            <div class="scout-examples">
-              <article>
-                <h3>How many replies go beyond<br />current follow lists?</h3>
-                <p class="scout-stat"><strong>29.3%</strong> of replies between different accounts</p>
-              </article>
-              <article>
-                <h3>What percentage of<br />follows are mutual?</h3>
-                <p class="scout-stat"><strong>44.9%</strong> of follows have a follow back</p>
-              </article>
+            <h2>[Community insights]</h2>
+            <p class="metrics-description">[Explain the question these measurements answer.]</p>
+            <p class="metrics-flow">[Input] <span aria-hidden="true">→</span> [Analysis] <span aria-hidden="true">→</span> [Insight]</p>
+            <div class="metrics-grid">
+              <article><h3>[Metric one]</h3><p class="metric-value">[XX%]</p><p class="metric-description">[Definition and scope]</p></article>
+              <article><h3>[Metric two]</h3><p class="metric-value">[XX%]</p><p class="metric-description">[Definition and scope]</p></article>
             </div>
-            <div class="tool-footer">
-              <a class="link-accent" href="https://nexus-scout.pubky.app/llms.txt" target="_blank" rel="noopener noreferrer">nexus-scout.pubky.app/llms.txt</a>
-            </div>
+            <p class="metrics-source">[Public source · measured on date]</p>
           </div>
-          <aside class="notes">
-            <p>Nexus Scout is a public, read-only query gateway to the Nexus social graph. An LLM assistant can read the schema, translate a social graph prompt into Cypher, and call Scout. Scout validates the query, runs it against Neo4j, and returns JSON; Scout itself is not the LLM. No account, API key, or installation is required for the public endpoint.</p>
-            <p>Start with the <a href="https://nexus-scout.pubky.app/llms.txt" target="_blank" rel="noopener noreferrer">LLM guide</a> and <a href="https://nexus-scout.pubky.app/v1/schema" target="_blank" rel="noopener noreferrer">graph schema</a>. Both examples below were executed against POST https://nexus-scout.pubky.app/v1/query. These are fixed snapshots of this instance's indexed graph, not a live feed or a claim to cover all Pubky activity.</p>
-            <p>Replies beyond current follow lists: captured 7 October 2026 at 10:39:11 UTC. Of distinct reply-to-parent links between different indexed authors, 29.3% (rounded) go from a replying account to an author it does not currently follow. Scope: current indexed follow graph; self-replies excluded. This is not the follow relationship at the time of posting. It tests only whether the replier follows the parent post's author, not the reverse direction.</p>
-            <pre><code>MATCH (replier:User)-[:AUTHORED]-&gt;(reply:Post)
-      -[:REPLIED]-&gt;(parent:Post)&lt;-[:AUTHORED]-(author:User)
-WHERE replier.id &lt;&gt; author.id
-WITH DISTINCT replier, reply, parent, author
-RETURN count(*) AS cross_account_reply_links,
-       sum(CASE WHEN exists((replier)-[:FOLLOWS]-&gt;(author))
-                THEN 0 ELSE 1 END)
-       AS replies_to_accounts_not_followed
-LIMIT 1</code></pre>
-            <p>Parameters: none. Request limit: 1. This returns one aggregate row; it does not cap the reply links counted.</p>
-            <p>Mutual follows: captured 7 October 2026 at 10:50:29 UTC. Of distinct directed follows between different accounts in the indexed graph, 44.9% (rounded) have a reverse follow. Self-follows are excluded and parallel relationships are deduplicated. Each reciprocal pair contributes two directed follows. This is a percentage of follows, not of accounts or pairs. Exact aggregate responses and calculations are retained in the ignored working artifacts.</p>
-            <pre><code>MATCH (a:User)-[:FOLLOWS]-&gt;(b:User)
-WHERE a.id &lt;&gt; b.id
-WITH DISTINCT a, b
-RETURN count(*) AS directed_follows,
-       sum(CASE WHEN exists((b)-[:FOLLOWS]-&gt;(a))
-                THEN 1 ELSE 0 END) AS mutual_directed_follows
-LIMIT 1</code></pre>
-            <p>Parameters: none. Request limit: 1. This is one aggregate result row; the limit does not limit the relationships counted. Calculate mutual_directed_follows / directed_follows × 100 and round to one decimal place.</p>
-          </aside>
+          <aside class="notes">[Presenter and duration.] Replace both sample values with verified data or remove this slide. Record the public source, measurement date, definitions, and limitations here. The deck does not fetch live data.</aside>
         </section>
 
-        <section class="slide image-slide" id="nexus-scout-example" aria-label="Nexus Scout example query and results">
+        <section class="slide presenter-slide bg-shards" id="presenter" aria-label="Project presentation">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <h2 class="image-slide-title">Nexus Scout · example query</h2>
-          <button class="image-stage" type="button" data-image-viewer aria-label="Enlarge Nexus Scout example to read the results and query">
-            <img src="./assets/screenshots/nexus-scout-query.png" width="2776" height="1493" alt="Nexus Scout example: the three most popular posts in a seven-day window, excluding posts tagged pubky or ai, followed by the executed Cypher query and parameters." />
+          <img class="presenter-art" src="./assets/placeholders/square.svg" width="640" height="640" alt="Placeholder for project artwork" />
+          <div class="slide-body">
+            <h2>[Project name]</h2>
+            <p class="project-description">[One sentence introducing the project or live demo.]</p>
+            <p class="speaker">[Presenter name]</p>
+          </div>
+          <aside class="notes">[Introduce the presenter and allow a duration for the demo.] Replace the square placeholder with local project artwork and update its alt text and intrinsic dimensions. Keep the project title short enough for the left column.</aside>
+        </section>
+
+        <section class="slide presenter-slide landscape-art bg-triangle bg-guest" id="guest" aria-label="Guest presentation">
+          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
+          <img class="presenter-art" src="./assets/placeholders/landscape.svg" width="660" height="440" alt="Placeholder for guest artwork" />
+          <div class="slide-body">
+            <h2>[Guest talk]</h2>
+            <p class="project-description">[Talk subtitle or short introduction.]</p>
+            <p class="speaker">[Guest name]</p>
+            <p class="guest-affiliation">[Role · Organization]</p>
+            <p class="related-link"><a href="https://example.com/" target="_blank" rel="noopener noreferrer">[Related talk or project]</a></p>
+          </div>
+          <aside class="notes">[Introduce the guest, confirm the pronunciation of their name, and note the agreed duration.] Replace the landscape artwork, its alt text, and the example.com link. Remove the related link if it is not needed.</aside>
+        </section>
+
+        <section class="slide image-slide" id="image" aria-label="Screenshot or diagram">
+          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
+          <h2 class="image-slide-title">[Screenshot or diagram]</h2>
+          <button class="image-stage" type="button" data-image-viewer aria-label="Open screenshot or diagram in image viewer">
+            <img src="./assets/placeholders/screenshot.svg?no-inline" width="1600" height="900" alt="Placeholder for a screenshot or diagram" />
           </button>
-          <p class="image-slide-hint">Click image to enlarge</p>
-          <aside class="notes">User-supplied screenshot of a Nexus Scout query and results, captured on 7 October 2026. The prompt asks for the three most popular posts over the last seven days that were tagged neither pubky nor ai, with the Cypher and results. Click the image to open the full-resolution viewer. Use zoom controls and scroll to inspect the table, query, and original prompt; Escape returns to the deck. The screenshot is shown as supplied, without independently re-running its query.</aside>
+          <p class="image-slide-hint">Click image to zoom and explore · Esc to close</p>
+          <aside class="notes">[Explain what the audience should notice.] Replace the placeholder with a local image, set its intrinsic width and height, and describe it in alt text and the button label. The viewer supports Fit, 100%, zoom, and scrolling. Only publish images suitable for sharing.</aside>
         </section>
 
-        <section class="slide handoff bg-rings bg-feature" id="skills" aria-label="Agent skills for Pubky with Jay">
+        <section class="slide bg-orbits" id="roadmap" aria-label="What is next">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="skills-art" src="./assets/artwork/agent-skills.png" width="1254" height="1254" alt="A dark robot with a lime Pubky emblem working at a laptop, surrounded by glowing panels showing knowledge, workflows, and a connected globe." />
           <div class="slide-body">
-            <h2><a href="https://github.com/pubky/agent-skills" target="_blank" rel="noopener noreferrer">Agent skills</a></h2>
-            <p class="project-description">Get your LLM ready for Pubky.</p>
-            <span class="speaker">Jay</span>
-          </div>
-          <aside class="notes">Hand over to Jay for five to ten minutes. The linked title opens the pubky/agent-skills repository. The supplied illustration is shown uncropped. Confirm the demo with the presenter.</aside>
-        </section>
-
-        <section class="slide handoff bg-squares bg-collections" id="collections" aria-label="Pubky Collections with secondl1ght">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="collections-art" src="./assets/artwork/collections-topics.png" width="1254" height="1254" alt="Cards containing links, text, images, and other content grouped into glowing folders labelled Rock Music, Real Madrid, Dark Memes, and Economy Podcasts." />
-          <div class="slide-body">
-            <h2>Pubky Collections</h2>
-            <p class="project-description">Bring together what belongs together.</p>
-            <span class="speaker">secondl1ght</span>
-          </div>
-          <aside class="notes">Hand over to secondl1ght for a demo of Pubky Collections, under five minutes. Use only the public handle secondl1ght. The description is supported by the <a href="https://pubky.app/post/ihaqcthsdbk751sxctk849bdr7yz7a934qen5gmpcbwcur49i97y/0035GRWTEMMG0" target="_blank" rel="noopener noreferrer">public Collections announcement</a>.</aside>
-        </section>
-
-        <section class="slide bg-lattice bg-quiet" id="self-hosting" aria-label="Run your own Pubky Homeserver on Umbrel">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="hosting-art" src="./assets/artwork/self-hosting.png" width="1254" height="1254" alt="A black home server with lime Pubky branding, surrounded by icons representing files, media, people, and code." />
-          <div class="slide-body">
-            <h2>Run your own Homeserver</h2>
-            <p class="hosting-description">Self-sovereignty from your living room.<br />Host your Pubky data on Umbrel.</p>
-            <span class="speaker">SHAcollision</span>
-          </div>
-          <aside class="notes">Hand over to SHAcollision, also called SHA, for five to ten minutes on Umbrel, the dashboard, and tunneling. Use only this public name. Gabriel then briefly mentions the self-hosting guides during the handoff, approximately one minute. Avoid making unverified hardware requirements.</aside>
-        </section>
-
-        <section class="slide hosting-guide bg-lattice bg-quiet" id="self-hosting-guide" aria-label="Pubky Homeserver self-hosting guides">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="hosting-art" src="./assets/artwork/self-hosting.png" width="1254" height="1254" alt="A black home server with lime Pubky branding, surrounded by icons representing files, media, people, and code." />
-          <div class="slide-body">
-            <h2>Self-hosting guides</h2>
-            <p class="hosting-guide-source"><span class="hosting-guide-label">GitHub:</span> pubky-homeserver › <a href="https://github.com/pubky/pubky-homeserver/tree/main/docs" target="_blank" rel="noopener noreferrer">docs</a></p>
-            <ul class="hosting-guide-links">
-              <li><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/INSTALL.md" target="_blank" rel="noopener noreferrer">Install and run a Homeserver</a></li>
-              <li><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/DEPLOY.md" target="_blank" rel="noopener noreferrer">Deployment options</a></li>
-              <li><a href="https://github.com/pubky/pubky-homeserver/blob/main/docs/deploy/cloudflare-tunnel.md" target="_blank" rel="noopener noreferrer">Cloudflare Tunnel</a></li>
-            </ul>
-          </div>
-          <aside class="notes">Start with the repository's docs directory, then show the individual guides: “Install and Run Pubky Homeserver” in docs/INSTALL.md, deployment options in docs/DEPLOY.md, and the Cloudflare Tunnel guide in docs/deploy/cloudflare-tunnel.md. Open the links for details; do not infer hardware requirements from this slide.</aside>
-        </section>
-
-        <section class="slide protocol bg-orbits" id="pkarr" aria-label="The new PKARR API with Andrei">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="pkarr-art" src="./assets/artwork/pkarr.png" width="1254" height="1254" alt="A PKARR DNS-record panel above a globe linked to five servers." />
-          <div class="slide-body">
-            <h2>The new PKARR API</h2>
-            <p class="lead">Public key addressable resource records</p>
-            <p class="project-description">The decentralized DNS system</p>
-            <span class="speaker">Andrei</span>
-          </div>
-          <aside class="notes">Hand over to Andrei for approximately ten minutes. Use only the first name. The agenda specifies a new PKARR API but no API details; the speaker will provide those in the walkthrough. The expansion of PKARR is also present in the supplied inspiration deck. The short description follows the <a href="https://github.com/pubky/pkarr" target="_blank" rel="noopener noreferrer">PKARR repository</a>.</aside>
-        </section>
-
-        <section class="slide guest bg-triangle bg-iroh" id="iroh-blobs" aria-label="Iroh content discovery with guest speaker Rüdiger Klaehn from iroh">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="iroh-art" src="./assets/artwork/iroh-blobs.png" width="1536" height="1024" alt="Two iroh-branded laptops exchanging file blocks over glowing links." />
-          <div class="slide-body">
-            <h2>Iroh content discovery</h2>
-            <p class="guest-subtitle">Using Mainline and PKARR</p>
-            <span class="speaker">Rüdiger Klaehn</span>
-            <p class="project-description">Guest speaker <span class="guest-affiliation">– iroh</span></p>
-            <div class="previous-talk">
-              <p class="previous-talk-label">Previously on the call · YouTube</p>
-              <p class="previous-talk-title"><a href="https://www.youtube.com/watch?v=ZL-MxJtTIks" target="_blank" rel="noopener noreferrer">Pubky Dev Community Call #2: Iroh and PKARR</a></p>
+            <h2>What’s next</h2>
+            <div class="content-grid">
+              <article class="content-item"><h3>[Recently shipped]</h3><p>[Confirmed releases and milestones]</p></article>
+              <article class="content-item"><h3>[In progress]</h3><p>[Work currently underway]</p></article>
+              <article class="content-item"><h3>[Exploring]</h3><p>[Ideas and open questions]</p></article>
+              <article class="content-item"><h3>[Get involved]</h3><p>[A concrete next step for the audience]</p></article>
             </div>
           </div>
-          <aside class="notes">After Andrei's PKARR presentation, welcome back guest speaker Rüdiger Klaehn from iroh to speak about Iroh content discovery using Mainline and PKARR. He previously appeared on Community Call #2. The linked YouTube excerpt is titled “Pubky Dev Community Call #2: Iroh and PKARR”; use that exact title to find it on YouTube. Confirm the duration of today's talk with the speaker. João's Loopky demo follows this guest talk.</aside>
+          <aside class="notes">[Presenter and duration.] Clearly distinguish released work, active development, and ideas. Add dates only when confirmed. Replace these placeholders with current plans before presenting.</aside>
         </section>
 
-        <section class="slide handoff bg-shards" id="loopky" aria-label="Loopky demo with João">
+        <section class="slide closing bg-top-outlines bg-closing" id="thanks" aria-label="Thank you and questions">
           <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="loopky-art" src="./assets/artwork/loopky.png" width="1254" height="1254" alt="Glowing flashcards, including a question about photosynthesis, surrounded by a loop labelled Learn, Repeat, Improve, and Remember." />
+          <img class="thanks-art" src="./assets/artwork/thanks.png" width="1199" height="1312" alt="A person stepping through a glowing keyhole gateway into a connected world." />
           <div class="slide-body">
-            <h2>Loopky</h2>
-            <p class="project-description">Mobile flashcard apps with spaced repetition.</p>
-            <span class="speaker">João</span>
-          </div>
-          <aside class="notes">Hand over to João for approximately ten minutes. Loopky is a flashcard app with spaced repetition, using Pubky for identity and data. The description is verified against the <a href="https://github.com/jvsena42/loopky" target="_blank" rel="noopener noreferrer">project repository</a> and Pubky's demo page. Its public website is <a href="https://loopky.app/" target="_blank" rel="noopener noreferrer">loopky.app</a>; let the presenter introduce the demo.</aside>
-        </section>
-
-        <section class="slide roadmap bg-triangle" id="coming-next" aria-label="The next chapter: just released and upcoming work">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <div class="slide-body">
-            <h2>The next chapter</h2>
-            <div class="roadmap-grid">
-              <article class="roadmap-item"><h3>Just released</h3><p>Pubky Ring <span class="release-version">v2.0</span><br />Pubky Passport</p></article>
-              <article class="roadmap-item"><h3>Private data</h3><p>Locks<br />Access control &amp; encryption<br />Private messages</p></article>
-              <article class="roadmap-item"><h3>Apps &amp; payments</h3><p>Paykit<br />Marketplace<br />Pubky Arena</p></article>
-              <article class="roadmap-item"><h3>Shared data &amp; indexing</h3><p>pubky-social-specs<br />pubky-watcher</p></article>
-            </div>
-          </div>
-          <aside class="notes">Gabriel, approximately two minutes. Pubky Ring v2.0 and Pubky Passport are grouped as just released, as confirmed by the presenter. Passport supports simpler login. The other three groups cover upcoming work; their scope and timing may change, with no release dates promised here. Private messages, Marketplace, and Pubky Arena are included at the presenter's request. Explain social specifications as the next evolution of pubky-app-specs, including the proposed /pub/pubky.app to /pub/social transition, only after confirming current scope. Badges remain unconfirmed.</aside>
-        </section>
-
-        <section class="slide image-slide" id="conferences" aria-label="Upcoming conferences">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <h2 class="image-slide-title">Upcoming conferences</h2>
-          <div class="image-stage">
-            <img src="./assets/screenshots/conferences.png" width="1138" height="587" alt="Next stop: Pubky. A virtual scene with conference boards for Prague, Lugano, and San Salvador, a Pubky avatar, and Tether branding." />
-          </div>
-          <aside class="notes">User-supplied conference scene. The image includes DARK Prague on 2–4 October 2026, which precedes this call, alongside the upcoming Plan B Forum Lugano on 23–24 October 2026 and Plan B Forum El Salvador on 29–30 January 2027. These dates are transcribed from the supplied image.</aside>
-        </section>
-
-        <section class="slide closing bg-top-outlines bg-closing" id="thanks" aria-label="Closing joke: Cypherpunks prompt LLMs">
-          <header class="slide-header"><img class="logo" src="./assets/branding/pubky-logo.svg" alt="Pubky" /></header>
-          <img class="thanks-art" src="./assets/artwork/thanks.png" width="1199" height="1312" alt="A person stepping through a glowing keyhole gateway into a connected world, surrounded by community, media, privacy, and sharing icons." />
-          <div class="slide-body">
-            <h2 class="closing-quote">“Cypherpunks<br />prompt LLMs”</h2>
-            <p class="quote-attribution">— Aristotle (probably), c. 350 BCE</p>
+            <h2>Thank you.<br /><span class="accent">Questions?</span></h2>
+            <p class="closing-message">[Closing message or next call details]</p>
             <div class="closing-links"><a class="link-accent" href="https://pubky.app/" target="_blank" rel="noopener noreferrer">pubky.app</a><span class="closing-link-separator" aria-hidden="true">·</span><a class="link-accent" href="https://pubky.org/" target="_blank" rel="noopener noreferrer">pubky.org</a></div>
           </div>
-          <aside class="notes">Close with the deliberately fictional, anachronistic Aristotle quote: “Cypherpunks prompt LLMs.” The date is within his lifetime; this is a joke, not a historical quotation. Thank the presenters and everyone who joined. Invite people to explore the guide at pubky.org and continue the conversation on pubky.app. Share replay information only once its public destination is confirmed.</aside>
+          <aside class="notes">[Thank the presenters and audience, take questions, and share the next step.] Add replay or next-call details only after confirming their public destination or date.</aside>
         </section>
       </div>
     </div>

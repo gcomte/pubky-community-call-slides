@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Browser slides for Pubky Community Call #4",
+  "description": "Reusable browser slide template for Pubky Community Calls",
   "license": "MIT",
   "engines": {
     "node": ">=22.12.0"

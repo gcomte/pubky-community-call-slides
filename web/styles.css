@@ -57,14 +57,7 @@ html, body, body.reveal-viewport, .reveal {
 .speaker { color: var(--muted); font-size: 28px; line-height: 1.2; }
 .slide-body > .speaker { position: absolute; bottom: 0; left: 0; }
 
-/* These layers retain the PowerPoint's 1600 × 900 geometry. Reveal scales
-   the complete slide; backgrounds.css adjusts only the backdrop opacity. */
-.source-scene { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; user-select: none; }
-.source-scene > img, .source-scene > span { position: absolute; display: block; }
-.source-scene > img { object-fit: fill; }
-.last-call-scene { background: #000; }
-
-/* Content fits the open areas in each original composition. */
+/* Cover retains the source deck's composition and animated stream indicator. */
 .cover-logo { position: absolute; left: 160px; top: 150px; width: 300px; height: 98.6842px; object-fit: contain; }
 .cover .slide-body { inset: 330px auto auto 160px; width: 960px; }
 .cover h1 { font-size: 108px; line-height: 1.08; letter-spacing: -3px; }
@@ -72,21 +65,36 @@ html, body, body.reveal-viewport, .reveal {
 /* Functional animation: preserve the original loop even with reduced transitions. */
 .stream-animation { position: absolute; left: 1170px; top: 320px; width: 266.6667px; height: 266.6667px; object-fit: contain; mix-blend-mode: screen; }
 
-/* Quiet content layouts give the illustrated sections breathing room. */
-.agenda-list, .sdk-highlights, .roadmap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 105px; row-gap: 62px; margin-top: 76px; }
-.agenda-row p { font-size: 28px; line-height: 1.45; color: var(--muted); margin-top: 18px; }
-.agenda-row h3 { font-size: 40px; }
-.scout-description { margin-top: 30px !important; color: var(--muted); font-size: 30px; line-height: 1.4; }
-.scout-flow { margin-top: 28px !important; color: var(--paper); font-size: 40px; line-height: 1.25; font-weight: 550; letter-spacing: -0.3px; white-space: nowrap; }
-.scout-flow span { margin: 0 10px; color: var(--lime); }
-.scout-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 105px; margin-top: 44px; }
-.scout-examples h3 { font-size: 30px; line-height: 1.18; }
-.scout-stat { margin-top: 18px !important; font-size: 26px; line-height: 1.3; }
-.scout-stat strong { display: block; margin-bottom: 6px; color: var(--paper); font-size: 48px; font-weight: 550; line-height: 1; letter-spacing: -1px; }
-.tool-footer { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 32px; font-size: 28px; line-height: 1.4; }
-.scout .tool-footer { font-size: 44px; font-weight: 550; line-height: 1.2; letter-spacing: -0.8px; }
+/* Reusable layouts depend on classes so copied slides can have any unique ID. */
+.content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 105px; row-gap: 62px; margin-top: 76px; }
+.content-item h3 { font-size: 40px; }
+.content-item p { font-size: 28px; line-height: 1.45; color: var(--muted); margin-top: 18px; }
+.title-row { display: flex; align-items: baseline; gap: 48px; }
+.release-version { flex-shrink: 0; font-family: var(--code-font); font-size: 36px; line-height: 1.1; color: var(--lime); }
+.reveal code { font-family: var(--code-font); }
+.resource-site { margin-top: 18px !important; font-size: 30px; line-height: 1.4; }
+.resources-slide .content-grid { row-gap: 36px; margin-top: 32px; }
+.reveal .resource-list { display: grid; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 25px; line-height: 1.3; color: var(--muted); }
 
-/* Image-led slides trade the large title for more room to inspect the source. */
+.metrics-description { margin-top: 30px !important; color: var(--muted); font-size: 30px; line-height: 1.4; }
+.metrics-flow { margin-top: 28px !important; font-size: 40px; line-height: 1.25; font-weight: 550; }
+.metrics-flow span { margin: 0 10px; color: var(--lime); }
+.metrics-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 105px; margin-top: 44px; }
+.metrics-grid h3 { font-size: 30px; line-height: 1.18; }
+.reveal .metric-value { margin-top: 18px; font-size: 60px; font-weight: 550; line-height: 1.1; color: var(--lime); }
+.reveal .metric-description { margin-top: 12px; font-size: 26px; line-height: 1.3; color: var(--muted); }
+.metrics-source { position: absolute; bottom: 0; left: 0; font-size: 26px; line-height: 1.4; color: var(--muted); }
+
+.presenter-slide .slide-body { width: 600px; }
+.presenter-slide h2 { overflow-wrap: break-word; }
+.reveal .project-description { margin-top: 42px; color: var(--muted); font-size: 30px; line-height: 1.4; }
+.presenter-slide .speaker { position: static; margin-top: 56px; font-size: 48px; }
+.reveal .presenter-art { position: absolute; left: 800px; top: 160px; width: 640px; height: 640px; object-fit: contain; }
+.landscape-art .presenter-art { left: 780px; top: 280px; width: 660px; height: 440px; }
+.reveal .guest-affiliation { margin-top: 18px; color: var(--lime); font-size: 28px; line-height: 1.4; }
+.reveal .related-link { margin-top: 64px; font-size: 26px; line-height: 1.4; }
+
+/* Image slides reserve the canvas for uncropped screenshots or diagrams. */
 .reveal .image-slide-title { position: absolute; left: 160px; top: 80px; font-size: 44px; line-height: 1.1; letter-spacing: -1.2px; }
 .image-stage { position: absolute; inset: 150px 60px 56px; display: block; padding: 0; border: 0; background: transparent; }
 button.image-stage { cursor: zoom-in; }
@@ -94,71 +102,9 @@ button.image-stage { cursor: zoom-in; }
 .image-stage:focus-visible { outline: 3px solid var(--lime); outline-offset: 8px; }
 .reveal .image-slide-hint { position: absolute; bottom: 18px; left: 160px; color: var(--muted); font-size: 22px; line-height: 1.3; }
 
-.sdk-title { display: flex; align-items: baseline; gap: 64px; }
-.sdk .release-version { font-size: 40px; line-height: 1.1; font-weight: 550; color: var(--lime); }
-.sdk .release-version, .sdk .introduced-version, .sdk code { font-family: var(--code-font); letter-spacing: 0; white-space: nowrap; }
-.sdk code { font-size: 1em; }
-.sdk-highlight h3 { font-size: 40px; line-height: 1.15; }
-.sdk-highlight .sdk-feature-detail { font-size: 28px; line-height: 1.45; color: var(--muted); margin-top: 18px; }
-.sdk .introduced-version { display: inline-block; margin-left: 16px; font-size: 28px; font-weight: 450; letter-spacing: 0; color: var(--muted); vertical-align: baseline; }
-.sdk-reliability-details { display: grid; gap: 6px; margin-top: 18px; }
-.sdk-reliability-details p { font-size: 28px; line-height: 1.45; color: var(--muted); }
-.sdk-path-examples { display: grid; gap: 6px; margin-top: 18px; color: var(--muted); }
-.sdk-path-examples p { font-size: 25px; line-height: 1.4; }
-/* Omit the small decoration that crosses the first feature's details. */
-#sdk [data-source-shape="422"] { display: none; }
-
-#developer-hub h2 { white-space: nowrap; }
-.resource-site { margin-top: 18px !important; font-size: 30px; line-height: 1.4; }
-.docs-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 105px; row-gap: 36px; margin-top: 32px; }
-.docs-section h3 { font-size: 40px; line-height: 1.15; }
-.reveal .docs-items { display: grid; gap: 4px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 25px; line-height: 1.3; color: var(--muted); }
-
-.reveal .project-description { max-width: 600px; margin-top: 42px; color: var(--muted); font-size: 30px; line-height: 1.4; }
-#pkarr .project-description { margin-top: 24px; font-size: 28px; }
-
-#skills .slide-body { width: 640px; }
-#skills h2 { white-space: nowrap; }
-#skills h2 a { text-decoration: none; }
-#skills .speaker { position: static; display: block; margin-top: 56px; font-size: 48px; }
-.reveal .skills-art { position: absolute; left: 800px; top: 160px; width: 640px; height: 640px; object-fit: contain; }
-
-#collections .slide-body { inset: 160px 160px 100px; }
-#collections h2 { font-size: 100px; line-height: 1.04; white-space: nowrap; }
-#collections .speaker { position: static; display: block; margin-top: 56px; font-size: 48px; }
-.reveal .collections-art { position: absolute; left: 820px; top: 270px; width: 620px; height: 620px; object-fit: contain; }
-
-.reveal .hosting-description { max-width: 600px; margin-top: 52px; font-size: 32px; line-height: 1.45; color: var(--muted); }
-#self-hosting .speaker { position: static; display: block; margin-top: 52px; font-size: 48px; }
-.reveal .hosting-art { position: absolute; left: 820px; top: 270px; width: 620px; height: 620px; object-fit: contain; }
-
-.protocol .lead { max-width: 660px; margin-top: 50px; font-size: 34px; white-space: nowrap; }
-.protocol .speaker { position: static; display: block; margin-top: 52px; font-size: 48px; }
-.reveal .pkarr-art { position: absolute; left: 820px; top: 270px; width: 620px; height: 620px; object-fit: contain; }
-#iroh-blobs h2 { white-space: nowrap; }
-.reveal .guest-subtitle { max-width: 660px; margin-top: 42px; color: var(--muted); font-size: 30px; line-height: 1.4; }
-#iroh-blobs .speaker { position: static; display: block; margin-top: 56px; font-size: 48px; }
-#iroh-blobs .project-description { margin-top: 18px; }
-.guest-affiliation { color: var(--lime); }
-.reveal .iroh-art { position: absolute; left: 780px; top: 280px; width: 660px; height: 440px; object-fit: contain; }
-.previous-talk { margin-top: 96px; width: 600px; }
-.previous-talk-label { color: var(--muted); font-size: 22px; line-height: 1.4; }
-.previous-talk-title { margin-top: 14px !important; font-size: 26px; line-height: 1.4; }
-.reveal .hosting-guide-links { display: grid; gap: 24px; max-width: 640px; margin: 38px 0 0; padding-left: 30px; list-style: disc; color: var(--muted); font-size: 32px; line-height: 1.4; }
-.hosting-guide-source { max-width: 650px; margin-top: 60px !important; font-size: 36px; line-height: 1.4; }
-.hosting-guide-label { color: var(--muted); }
-
-#loopky .slide-body { width: 640px; }
-#loopky .speaker { position: static; display: block; margin-top: 56px; font-size: 48px; }
-.reveal .loopky-art { position: absolute; left: 800px; top: 160px; width: 640px; height: 640px; object-fit: contain; }
-
-.roadmap-item h3 { font-size: 40px; }
-.roadmap-item .release-version { font-family: var(--code-font); letter-spacing: 0; white-space: nowrap; }
-.roadmap-item p { font-size: 28px; color: var(--muted); line-height: 1.45; margin-top: 18px; }
-
 .closing .slide-body { width: 620px; }
-.closing .closing-quote { font-size: 92px; line-height: 1.1; letter-spacing: -3px; }
-.quote-attribution { margin-top: 34px !important; color: var(--muted); font-size: 28px; line-height: 1.4; }
+.closing h2 { font-size: 92px; line-height: 1.1; letter-spacing: -3px; }
+.closing-message { margin-top: 34px !important; color: var(--muted); font-size: 28px; line-height: 1.4; }
 .closing-links { display: flex; align-items: baseline; gap: 28px; margin-top: 44px; font-size: 44px; line-height: 1.25; }
 .closing-link-separator { color: var(--muted); }
 .reveal .thanks-art { position: absolute; right: 160px; top: 150px; width: auto; height: 650px; object-fit: contain; }

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640">
+  <rect x="2" y="2" width="636" height="636" rx="24" fill="#0b0b12" stroke="#44444e" stroke-width="2" stroke-dasharray="12 12"/>
+  <path d="M 284.0 235.0 h 72 v 54 h -72 Z M 290.0 282.0 l 20 -22 l 16 16 l 14 -10 l 12 16" fill="none" stroke="#c8ff00" stroke-width="3" stroke-linejoin="round"/>
+  <text x="320.0" y="334.0" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="28">[Project artwork]</text>
+  <text x="320.0" y="380.0" text-anchor="middle" fill="#a7a7af" font-family="sans-serif" font-size="18.2">Replace with your own image · 640 × 640</text>
+</svg>

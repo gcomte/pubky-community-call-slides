@@ -23,11 +23,11 @@
   background-position: 700px 245px;
   opacity: .045;
 }
-#welcome.bg-squares::before {
+.cover.bg-squares::before {
   background-position: 740px -160px;
   opacity: .03;
 }
-.bg-squares.bg-collections::before {
+.bg-squares.bg-large::before {
   background-size: 1800px auto;
   background-position: 640px 120px;
   opacity: .035;
@@ -41,7 +41,6 @@
   opacity: .3;
 }
 .bg-triangle.bg-quiet::before { opacity: .2; }
-#sdk .source-scene { opacity: .45; }
 
 /* Source slide 20: only the nine diminishing outline layers. */
 .bg-lattice::before {
@@ -81,7 +80,7 @@
   opacity: .025;
 }
 /* A smaller, lower triangle frames the guest artwork below the header. */
-.bg-triangle.bg-iroh::before {
+.bg-triangle.bg-guest::before {
   background-size: 660.2835px 597.0709px, 734.5038px 654.8504px;
   background-position: 870px 190px, 870px 190px;
   opacity: .24;

@@ -1,5 +1,25 @@
 # Branding assets
 
+## Template and source-deck inventory
+
+The `main` branch is a reusable template derived from the deck preserved on
+`community-call-4`. Placement descriptions and slide IDs in the source inventory
+below document that original deck. Its assets remain available for reuse under
+the same terms even when they are not displayed by the template.
+
+The template displays the full Pubky logo, brand-mark favicon, Inter Tight font,
+cover spinner, and `thanks.png` closing illustration. It retains the square,
+ring, triangle, lattice, shard, orbit, and top-outline background motifs through
+reusable CSS classes. The cover uses a 300-pixel-wide logo; the nine remaining
+slides use the same 132 × 44 pixel header logo at x1308, y80. The historical SDK
+composition and event screenshots are not displayed in the template.
+
+`web/assets/placeholders/square.svg`, `landscape.svg`, and `screenshot.svg` are
+original geometric authoring placeholders covered by the repository's MIT License.
+They contain no third-party artwork. Replace them with suitable local images
+and record any additional asset terms here. Placeholder use does not change the
+rights or terms of the retained branding and source artwork described below.
+
 ## License scope
 
 The branding assets and source presentation compositions identified below,

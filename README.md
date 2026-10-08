@@ -1,5 +1,7 @@
 # Pubky Community Call Template
 
+[**Live preview →**](https://gcomte.github.io/pubky-community-call-slides/)
+
 A reusable browser presentation for Pubky community calls, built with reveal.js,
 HTML, CSS, and SVG. `main` contains the template; the original presentation is
 preserved on the `community-call-4` branch.
@@ -115,6 +117,19 @@ rehearsal.
 To export a PDF, open `http://localhost:4322/?print-pdf` in Chromium or Chrome,
 then print to PDF with landscape orientation, background graphics enabled,
 and no margins. Check the exported pages before sharing.
+
+## GitHub Pages preview
+
+The [live preview](https://gcomte.github.io/pubky-community-call-slides/) updates
+automatically when changes are pushed to `main`. The
+[Pages workflow](.github/workflows/pages.yml) installs the locked dependencies,
+builds the slides, and publishes only `dist/`, including the license notices.
+It can also be run manually from the repository's Actions tab with `main` selected.
+Call branches keep their own content without replacing the template preview.
+
+The preview is public, including its speaker notes. Repository visibility is
+independent of the published site. For a fork, enable **Settings → Pages → Source →
+GitHub Actions** and update the preview links above to the fork's Pages URL.
 
 ## Deploy to Vercel
 
